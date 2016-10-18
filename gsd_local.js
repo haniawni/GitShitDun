@@ -11,9 +11,10 @@
 //     .epilog('copyright 2015')
 //     .argv;
 var argv = require('yargs')
-    .usage('Usage: $0 <command> [options]')
+    .usage('Usage: gsd <command> [options]')
 
     .commandDir('scripts')
     .demand(1)
+    .alias('h','help')
     .help()
     .argv

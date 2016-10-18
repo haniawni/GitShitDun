@@ -8,7 +8,7 @@ exports.command = 'mindful'
 exports.aliases = 'm'
 exports.desc = 'Launch repeating timer for mindfulness tracking'
 exports.builder = (yargs) => yargs
-    .usage('Usage: $0 mindful [options]')
+    .usage('Usage: gsd mindful [options]')
 
     .boolean('nopop')
     .describe('nopop','Disable Popups')
@@ -78,27 +78,3 @@ notifier.on('timeout', function (notifierObject, options) {
     console.log("   ~Notification timeout, retrying...")
     mindNotify();
 });
-
-
-
-//     //.command('mindful', '',require())
-//     //.demand(1, ['t','np','ns'])
-
-//     .boolean('nopop')
-//     .describe('nopop','Disable Popups')
-//     .alias('np','nopop')
-
-//     .boolean('nosound')
-//     .describe('nosound','Disable Sound')
-//     .alias('ns','nosound')
-    
-//     .describe('t','Inter-mindfulness-check interval')
-//     .nargs('t',1)
-//     .default('t',30)
-
-//     .alias('h','help')
-
-//     .argv
-//     //
-//     //.alias('m', 'mindful')
-//     //.example('$0 mindful -t repeat_time=30 -p=True', 'count the lines in the given file')
